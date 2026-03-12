@@ -50,7 +50,7 @@ const About = () => {
             className="col-span-12 md:col-span-6 md:col-start-7 space-y-6"
           >
             <p className="text-foreground/80 font-body text-lg leading-relaxed">
-              I'm an young UX designer and M.Sc. (IT), driven by a fierce ambition to
+              I'm a young UX designer and M.Sc. (IT), driven by a fierce ambition to
               become a leading name in Finnish design. Utilizing AI and insight, I can deliver 
               digital products that you'll want to return to.
 
