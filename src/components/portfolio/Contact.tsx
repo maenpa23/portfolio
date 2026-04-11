@@ -83,11 +83,11 @@ const Contact = () => {
               <div className="space-y-3">
                 <div>
                   <p className="font-body text-sm text-foreground">Mikki Aalto-Ylevä</p>
-                  <p className="text-xs text-muted-foreground font-body">The Good Side Oy · mikki@goodside.fi</p>
+                  <p className="text-xs text-muted-foreground font-body">The Good Side Oy · mikki[at]goodside.fi</p>
                 </div>
                 <div>
                   <p className="font-body text-sm text-foreground">Janne Gylling</p>
-                  <p className="text-xs text-muted-foreground font-body">Moretag Agency · janne@moretag.fi</p>
+                  <p className="text-xs text-muted-foreground font-body">Moretag Agency · janne[at]moretag.fi</p>
                 </div>
               </div>
             </div>
@@ -114,3 +114,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
