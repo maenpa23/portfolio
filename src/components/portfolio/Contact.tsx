@@ -34,9 +34,9 @@ const Contact = () => {
             <h2 className="font-display text-5xl md:text-7xl text-foreground leading-[1.05] mb-8">
               Let's create
               <br />
-              something <span className="italic text-primary">remarkable</span>
+              something <span className="italic text-primary">meaningful</span>
             </h2>
-            <p className="text-muted-foreground font-body leading-relaxed max-w-lg">
+            <p className="text-base text-muted-foreground font-body leading-relaxed max-w-lg">
               I'm seeking opportunities to grow and contribute to meaningful UX work.
               If you value enthusiasm, research-driven design, and someone who isn't afraid to
               challenge assumptions — let's talk.
@@ -62,16 +62,10 @@ const Contact = () => {
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a
-                href="tel:+358404164005"
-                className="group flex items-center justify-between py-4 border-b border-border hover:border-primary transition-colors duration-300"
-              >
-                <div>
-                  <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mb-1">Phone</p>
-                  <p className="text-foreground font-body text-sm">040 416 4005</p>
-                </div>
-                <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-              </a>
+              <div className="py-4 border-b border-border">
+                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mb-1">Phone</p>
+                <p className="text-foreground font-body text-sm">+358 40 416 4005</p>
+              </div>
               <div className="py-4 border-b border-border">
                 <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-body mb-1">Location</p>
                 <p className="text-foreground font-body text-sm">Tampere, Finland</p>
@@ -103,9 +97,6 @@ const Contact = () => {
         >
           <p className="text-muted-foreground text-xs font-body tracking-wide">
             © 2026 Sofianna Mäenpää
-          </p>
-          <p className="text-muted-foreground text-xs font-body italic">
-            Designed with insight.
           </p>
         </motion.div>
       </div>

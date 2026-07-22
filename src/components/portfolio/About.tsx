@@ -49,30 +49,30 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="col-span-12 md:col-span-6 md:col-start-7 space-y-6"
           >
-            <p className="text-foreground/80 font-body text-lg leading-relaxed">
-              I'm a young UX designer and M.Sc. (IT), driven by a fierce ambition to
-              become a leading name in Finnish design. Utilizing AI and insight, I can deliver 
-              digital products that you'll want to return to.
-
+            <p className="text-foreground/90 font-body text-lg leading-relaxed">
+            I'm a UX Designer and M.Sc. (IT) passionate about creating impactful digital experiences. 
+            By combining user-centered design, research, and AI-powered workflows, 
+            I help build products that people genuinely enjoy using. I'm driven by curiosity, continuous learning, 
+            and a constant ambition to grow as a designer.
             </p>
-            <p className="text-muted-foreground font-body leading-relaxed">
-              Equal parts analytical and creative, I thrive in cross-functional teams but also disappear
-              into deep focus sessions with headphones on, vibe coding applications that bridge the gap between
-              what users need and what technology can deliver.
+            <p className="text-base text-muted-foreground font-body leading-relaxed">
+            I love solving complex problems by understanding the people behind them. 
+            From research to collaborating with cross-functional teams, 
+            I'm motivated by turning insights into meaningful product decisions.
             </p>
 
             <div className="pt-8 grid grid-cols-3 gap-6 border-t border-border">
               {[
+                { label: "Strengths", items: ["UI Design", "Usability testing", "AI", "Design Systems"] },
                 { label: "Languages", items: ["Finnish — native", "English — C2", "Swedish — B2", "German — A1"] },
-                { label: "Strengths", items: ["UI Design", "AI", "Design Systems", "User Research"] },
-                { label: "Stack", items: ["Figma", "Cursor", "Claude", "M365"] },
+                { label: "Stack", items: ["Figma","Claude", "Cursor", "M365"] },
               ].map((col) => (
                 <div key={col.label}>
                   <p className="text-xs tracking-[0.25em] uppercase text-primary font-body mb-3">
                     {col.label}
                   </p>
                   {col.items.map((item) => (
-                    <p key={item} className="text-sm text-muted-foreground font-body leading-loose">
+                    <p key={item} className="text-base text-muted-foreground font-body leading-loose">
                       {item}
                     </p>
                   ))}

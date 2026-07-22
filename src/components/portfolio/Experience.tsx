@@ -6,7 +6,7 @@ const experiences = [
     company: "The Good Side Oy",
     period: "2025",
     description:
-      "Returned as a freelance designer at the request of a client. Designed a new software used in the deployment of heating systems. Lead the project and worked closely with the client developing the new product iteratively.",
+    "Designed a new software for the deployment and everyday use of heating systems. Led the UX/UI design process and collaborated closely with the client's cross-functional team to iteratively develop the product. Created a modern, intuitive interface and user flows that support users with varying levels of technical expertise.",
   },
   {
     
@@ -14,14 +14,14 @@ const experiences = [
     company: "The Good Side Oy",
     period: "2024 — 2025",
     description:
-      "Worked on client projects designing digital solutions that help clients succeed in international markets. Was responsible for UX research, conducting user data analysis for clients. Actively participated in project management and handled several clients. Also created content for the company's marketing and developed internal documentation.",
+      "Worked on client projects designing digital solutions that help clients succeed in international markets. Was responsible for UX research conducting user data analysis and helping client's make data-backed decisions. Actively participated in project management and worked with several clients. Additionally, created content for the company's marketing and developed internal documentation.",
   },
   {
     title: "UX Design Trainee",
     company: "Haltu Oy",
     period: "2023",
     description:
-      "Worked on client projects designing user-centered digital solutions and interfaces. Implemented UI designs iteratively based on client feedback and actively participated in project management and client collaboration. Was responsible for user experience design from concept to prototype implementation.",
+      "Designed user-centered digital solutions and interfaces for a variety of client projects. Designed UI's iteratively based on client feedback and actively participated in project management and client collaboration. Was responsible for user experience design from concept to prototype implementation.",
   },
   
 ];
@@ -32,13 +32,14 @@ const education = [
     place: "Tampere University",
     period: "2022 — 2024",
     detail: "Human-Technology Interaction · Minor in Psychology",
-    thesis: "Development Process of Design Systems in Finnish Companies",
+    thesis: "Thesis: Development Process of Design Systems in Finnish Companies: successes and challenges",
   },
   {
     title: "B.Sc. Automation Engineering",
     place: "Tampere University",
     period: "2018 — 2022",
-    detail: "Foundation in systems thinking and technical problem solving",
+    detail: "Automation Engineering · Minor in Software Engineering",
+    thesis: "Foundation in systems thinking and technical problem solving",
   },
 ];
 
@@ -91,9 +92,9 @@ const Experience = () => {
                   transition={{ duration: 0.5, delay: i * 0.12 }}
                 >
                   <p className="text-xs tracking-[0.3em] uppercase text-primary font-body mb-2">{exp.period}</p>
-                  <h3 className="font-display text-2xl text-foreground mb-1">{exp.title}</h3>
-                  <p className="text-sm text-primary font-body mb-3">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground font-body leading-relaxed">{exp.description}</p>
+                  <h3 className="font-display text-2xl tracking-[0.05em] text-foreground mb-1">{exp.title}</h3>
+                  <p className="text-m text-primary font-body mb-3">{exp.company}</p>
+                  <p className="text-m text-muted-foreground font-body leading-relaxed">{exp.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -111,13 +112,13 @@ const Experience = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.12 }}
                 >
-                  <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-body mb-2">{edu.period}</p>
-                  <h3 className="font-display text-2xl text-foreground mb-1">{edu.title}</h3>
-                  <p className="text-sm text-primary font-body mb-3">{edu.place}</p>
-                  <p className="text-sm text-muted-foreground font-body leading-relaxed">{edu.detail}</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-primary font-body mb-2">{edu.period}</p>
+                  <h3 className="font-display text-2xl tracking-[0.05em] text-foreground mb-1">{edu.title}</h3>
+                  <p className="text-m text-primary font-body mb-3">{edu.place}</p>
+                  <p className="text-m text-muted-foreground font-body leading-relaxed">{edu.detail}</p>
                   {edu.thesis && (
-                    <p className="text-sm text-muted-foreground font-body mt-2 italic">
-                      Thesis: "{edu.thesis}"
+                    <p className="text-m text-muted-foreground font-body mt-2 ">
+                      {edu.thesis}
                     </p>
                   )}
                 </motion.div>

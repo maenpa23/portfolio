@@ -1,34 +1,12 @@
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    num: "01",
-    title: "Paytrail",
-    subtitle: "Turning blind spots into insights",
-    description:
-      "Finland's largest digital payment provider had no structured way to understand user behavior. I introduced Hotjar analytics — heatmaps, session recordings, user flows — transforming gut feelings into evidence-based design decisions.",
-    tags: ["Analytics", "User Research", "Heatmaps", "Data Strategy"],
-    impact: "Enabled data-driven UX decisions across the entire product team",
-  },
-  {
-    num: "02",
-    title: "Gebwell",
-    subtitle: "When design meets engineering",
-    description:
-      "An energy company building smart heating systems needed a designer who could speak code. I embedded into the dev team, redesigning the Smart Hub interface — device management, reporting dashboards — creating a cohesive product that engineers and end users both love.",
-    tags: ["Product Design", "UI Design", "Dev Collaboration", "Dashboard"],
-    impact: "Unified design language across a complex technical product",
-  },
-  {
-    num: "03",
-    title: "Design Systems Research",
-    subtitle: "M.Sc. thesis — mapping uncharted territory",
-    description:
-      "Surveyed 24 Finnish organizations and conducted 7 deep interviews to uncover how Finnish companies have built design systems, and what issues have the faced in the process. The finding? Communication is both the biggest driver and the biggest blocker of design system success.",
-    tags: ["Research", "Design Systems", "Academic", "Strategy"],
-    impact: "Published findings on organizational design system maturity",
-  },
-];
+import { ChevronDown } from "lucide-react";
+import { projects } from "@/data/projects";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 40 },
@@ -68,7 +46,7 @@ const Projects = () => {
         <div className="space-y-0">
           {projects.map((project, i) => (
             <motion.article
-              key={i}
+              key={project.num}
               variants={fadeIn}
               initial="hidden"
               whileInView="visible"
@@ -84,7 +62,7 @@ const Projects = () => {
                 </div>
 
                 <div className="col-span-12 md:col-span-4">
-                  <h3 className="font-display text-3xl md:text-4xl text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
+                  <h3 className="font-display text-3xl tracking-[0.05em] md:text-4xl text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
                     {project.title}
                   </h3>
                   <p className="font-display italic text-primary text-lg">
@@ -93,22 +71,100 @@ const Projects = () => {
                 </div>
 
                 <div className="col-span-12 md:col-span-5 md:col-start-7">
-                  <p className="text-muted-foreground font-body leading-relaxed mb-6">
+                  <p className="text-base text-muted-foreground font-body leading-relaxed mb-6">
                     {project.description}
                   </p>
-                  <p className="text-xs tracking-[0.2em] uppercase text-primary/60 font-body mb-4">
-                    {project.impact}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
+
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-3 py-1.5 border border-border text-muted-foreground font-body hover:border-primary/40 hover:text-primary transition-colors duration-300"
+                        className="text-sm px-3 py-1.5 border border-border text-muted-foreground font-body"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="details" className="border-none">
+                      <AccordionTrigger className="group inline-flex w-auto items-center gap-2 py-0 text-xs font-body tracking-[0.2em] uppercase text-foreground hover:text-primary hover:no-underline transition-colors duration-300 [&>svg:last-child]:hidden">
+                        Read more
+                        <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                      </AccordionTrigger>
+
+                      <AccordionContent className="pt-8 pb-0">
+                        <div className="space-y-10 border-t border-border pt-8">
+                        <div className="space-y-4">
+                            <h4 className="text-xs font-body tracking-[0.4em] uppercase text-primary">
+                              My Role
+                            </h4>
+                            <p className="text-base text-muted-foreground font-body leading-relaxed">
+                              {project.role}
+                            </p>
+                          </div>
+
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-body tracking-[0.4em] uppercase text-primary">
+                              Context
+                            </h4>
+                            <p className="text-base text-muted-foreground font-body leading-relaxed">
+                              {project.context}
+                            </p>
+                          </div>
+
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-body tracking-[0.4em] uppercase text-primary">
+                              Overview
+                            </h4>
+                            <div className="space-y-4">
+                              {project.overview.map((paragraph, j) => (
+                                <p
+                                  key={j}
+                                  className="text-base text-muted-foreground font-body leading-relaxed"
+                                >
+                                  {paragraph}
+                                </p>
+                              ))}
+                            </div>
+                          </div>
+
+                          <div className="space-y-5">
+                            <h4 className="text-xs font-body tracking-[0.4em] uppercase text-primary">
+                              Key Contributions
+                            </h4>
+                            <ul className="space-y-3">
+                              {project.highlights.map((item, j) => (
+                                <li
+                                  key={j}
+                                  className="text-base flex gap-4 text-muted-foreground font-body leading-relaxed"
+                                >
+                                  <span className="mt-2.5 w-1.5 h-1.5 shrink-0 rounded-full bg-primary" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          <div className="space-y-4">
+                            <h4 className="text-xs font-body tracking-[0.4em] uppercase text-primary">
+                              Tools
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {project.tools.map((tool) => (
+                                <span
+                                  key={tool}
+                                  className="text-sm px-3 py-1.5 border border-border text-muted-foreground font-body"
+                                >
+                                  {tool}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 </div>
               </div>
             </motion.article>

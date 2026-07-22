@@ -44,7 +44,7 @@ const Hero = () => {
             >
               <div className="w-16 h-px bg-primary" />
               <p className="font-body text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Crafting human-centered digital experiences with emphaty, AI, and relentless curiosity.
+              Crafting human-centered digital experiences with research, AI, and relentless curiosity.
               </p>
             </motion.div>
           </div>
