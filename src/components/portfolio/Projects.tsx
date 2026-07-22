@@ -62,7 +62,7 @@ const Projects = () => {
                 </div>
 
                 <div className="col-span-12 md:col-span-4">
-                  <h3 className="font-display text-3xl tracking-[0.05em] md:text-4xl text-foreground group-hover:text-primary transition-colors duration-300 mb-2">
+                  <h3 className="font-display text-3xl tracking-[0.05em] md:text-4xl text-foreground">
                     {project.title}
                   </h3>
                   <p className="font-display italic text-primary text-lg">
