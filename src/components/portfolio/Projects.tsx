@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown} from "lucide-react";
 import { projects } from "@/data/projects";
 import {
   Accordion,
@@ -88,10 +88,12 @@ const Projects = () => {
 
                   <Accordion type="single" collapsible>
                     <AccordionItem value="details" className="border-none">
-                      <AccordionTrigger className="group inline-flex w-auto items-center gap-2 py-0 text-xs font-body tracking-[0.2em] uppercase text-foreground hover:text-primary hover:no-underline transition-colors duration-300 [&>svg:last-child]:hidden">
-                        Read more
-                        <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
-                      </AccordionTrigger>
+                    <AccordionTrigger className="group inline-flex w-auto items-center gap-2 py-0 text-xs font-body tracking-[0.2em] uppercase text-foreground hover:text-primary hover:no-underline transition-colors duration-300 [&>svg:last-child]:hidden">
+                      <span className="group-data-[state=open]:hidden">Read more</span>
+                      <span className="hidden group-data-[state=open]:inline">Read less</span>
+
+                      <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    </AccordionTrigger>
 
                       <AccordionContent className="pt-8 pb-0">
                         <div className="space-y-10 border-t border-border pt-8">
