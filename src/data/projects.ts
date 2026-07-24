@@ -57,6 +57,27 @@ export const projects: Project[] = [
   },
   {
     num: "03",
+    title: "Gebwell heating systems software",
+    subtitle: "Design in a physical product",
+    description:
+      "Gebwell needed a completely new software for managing and onboarding heating systems through a built-in touchpad. I worked closely with the client defining use cases for a wide variety of users, as well as designed the UI for the software. The result was a modern and intuitive software that enables onboarding and everyday use of the heating systems.",
+    tags: ["Product Design", "UI/UX Design", "Dev Collaboration", "User flows"],
+    role: "Product Designer, Project Manager",
+    context:
+      "Gebwell develops smart heating solutions for residential and commercial buildings. The project aimed to simplify the installation and day-to-day management of heating systems through a single, intuitive software platform. Used by mechanics during system setup via built-in touchscreen interfaces and later by building managers to monitor performance, adjust settings, and generate reports, the software needed to support users with varying levels of technical expertise. The goal was to create a modern, user-friendly experience that makes complex tasks efficient and accessible throughout the system's lifecycle.",
+    overview: [
+      "I joined as a freelance designer at the client's request, leading the redesign. Working closely together with the development team, I iterated on UI designs balancing complex device data with clear hierarchy, readable dashboards, and consistent interaction patterns.",
+    ],
+    highlights: [
+      "Designed the software from wireframes to high-fidelity UI",
+      "Ensured consistent design language throughout the whole software",
+      "Worked closely with the client designing the software with quick iteration-cycles",
+      "Defined user flows and information architecture",
+    ],
+    tools: ["Figma", "Figma Make", "SanaAI", "M365"],
+  },
+  {
+    num: "04",
     title: "Thesis on Design Systems",
     subtitle: "Conducting comprehensive research",
     description:
@@ -75,27 +96,7 @@ export const projects: Project[] = [
       "Identified communication as both the primary enabler and the most common blocker of adoption",
     ],
     tools: ["LaTeX", "Andor", "Google Scholar", "M365"],
-  },
-
-  {
-    num: "04",
-    title: "Gebwell heating systems",
-    subtitle: "Design in a physical product",
-    description:
-      "A Finnish energy company needed a completely new software for managing and onboarding heating systems through a built-in touchpad. I worked closely with the client defining use cases for a wide variety of users, as well as designed the UI for the software. The result was a modern and intuitive software that enables onboarding and everyday use of the heating systems.",
-    tags: ["Product Design", "UI/UX Design", "Dev Collaboration", "User flows"],
-    role: "Product Designer, Project Manager",
-    context:
-      "Gebwell develops smart heating solutions for residential and commercial buildings. The project aimed to simplify the installation and day-to-day management of heating systems through a single, intuitive software platform. Used by mechanics during system setup via built-in touchscreen interfaces and later by building managers to monitor performance, adjust settings, and generate reports, the software needed to support users with varying levels of technical expertise. The goal was to create a modern, user-friendly experience that makes complex tasks efficient and accessible throughout the system's lifecycle.",
-    overview: [
-      "I joined as a freelance designer at the client's request, leading the redesign. Working closely together with the development team, I iterated on UI designs balancing complex device data with clear hierarchy, readable dashboards, and consistent interaction patterns.",
-    ],
-    highlights: [
-      "Designed the software from wireframes to high-fidelity UI",
-      "Ensured consistent design language throughout the whole software",
-      "Worked closely with the client designing the software with quick iteration-cycles",
-      "Defined user flows and information architecture",
-    ],
-    tools: ["Figma", "Figma Make", "SanaAI", "M365"],
   }
+
+  
 ];
